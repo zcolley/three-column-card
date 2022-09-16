@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bold-font: 'Big Shoulders Display', cursive;
+  --font: 'Lexend Deca', sans-serif;
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: var(--light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* max-width: 450px; */
+  width: 40vw;
+}
+.card {
+  padding: 2rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.card .img-container {
+  margin-bottom: 1.8rem;
+}
+.card .text-info {
+  margin-bottom: 5rem;
+}
+.card .text-info h2 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: var(--bold-font);
+  margin-bottom: 2rem;
+}
+.card .text-info p {
+  font-size: 1rem;
+  color: var(--light-gray);
+  font-weight: 400;
+}
+
+.btn {
+  background-color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 0.85rem 1.8rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.btn:active {
+  background-color: inherit;
+  border: 2px solid white;
+  color: white;
+  /* padding: 0.85rem 1.8rem; */
+}
+.card:first-child {
+  background-color: var(--orange);
+  border-radius: 10px 0 0 10px;
+}
+.btn {
+  color: var(--orange);
+}
+.card:nth-child(2) {
+  background: var(--dark-cyan);
+}
+
+.card:last-child {
+  background: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+.first {
+  color: var(--orange);
+}
+.second {
+  color: var(--dark-cyan);
+}
+.last {
+  color: var(--very-dark-cyan);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 65vw;
+    /* margin-top: 40px; */
+  }
+  .card {
+    padding: 2rem;
+    /* height: 33vh; */
+  }
+  .card .img-container,
+  .card .text-info h2,
+  .card .text-info p,
+  .card .text-info {
+    margin-bottom: 0.75rem;
+  }
+  .card:first-child {
+    border-radius: 10px 10px 0 0;
+  }
+  .card:last-child {
+    border-radius: 0 0 10px 10px;
+  }
+}
